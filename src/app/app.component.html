@@ -1,4 +1,6 @@
-<marquee onmouseover="this.stop()" onmouseout="this.start()" *ngIf="b" [attr.scrollamount]="speed" ><span style="font-size: 2.7em;">{{Text}}</span></marquee>
+<div style="border: 1px solid slategrey;">
+  <marquee onmouseover="this.stop()" onmouseout="this.start()" *ngIf="b" [attr.scrollamount]="speed" ><span style="font-size: 2.7em;">{{Text}}</span></marquee>
+</div>
 <br>
 <br>
 <br>
@@ -7,10 +9,10 @@
 <br>
 <div class="form-group mt-5">
   <label c>Ваш текст:</label>
-  <textarea class="form-control col-10" type="text" [(ngModel)]="Text"  rows="3"></textarea>
+  <textarea placeholder="Введите ваш текст..." class="form-control col-10" type="text" [(ngModel)]="Text"  rows="3"></textarea>
 </div>
 
-<label>Введите скорость (от 1 до удобнога числа ):  </label>
+<label>Введите скорость бегущей строки (От 1 до удобной скорости ):  </label>
 <input  class="form-control col-6" type="number" [(ngModel)]="speed">
 <br>
 <label>Если нужно остановить бегущий текст, наведите мышкой на сам БЕГУЩИЙ текст</label>
