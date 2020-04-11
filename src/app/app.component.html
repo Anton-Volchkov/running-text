@@ -1,7 +1,9 @@
 <div style="border: 1px solid slategrey;">
   <marquee onmouseover="this.stop()" onmouseout="this.start()" *ngIf="b" [attr.scrollamount]="speed" ><span style="font-size: 2.7em;">{{Text}}</span></marquee>
 </div>
-<br>
+
+<div class="container">
+  <br>
 <br>
 <br>
 <br>
@@ -13,9 +15,12 @@
 </div>
 
 <label>Введите скорость бегущей строки (От 1 до удобной скорости ):  </label>
-<input  class="form-control col-6" type="number" [(ngModel)]="speed">
+<input  class="form-control col-6" type="number" min='1' [(ngModel)]="speed">
 <br>
 <label>Если нужно остановить бегущий текст, наведите мышкой на сам БЕГУЩИЙ текст</label>
 <br>
+<label>Как только вы уберете курсор с текста, он опять начнет двигаться</label>
 <br>
-<button class="btn btn-warning" (click)="Change()">Начать заново</button>
+<br>
+<button class="btn btn-warning col-4" (click)="Change()">Начать заново</button>
+</div>
