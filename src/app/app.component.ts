@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ReadText';
+  title = 'RunningText';
   Text:string = "";
   speed:number=1;
   b:boolean = true;
+  documentation:boolean = false;
+  docText = "Показать документацию";
 
   lol(obj:any)
   {
@@ -21,6 +23,12 @@ export class AppComponent {
  setTimeout(() => {
   this.b = !this.b;
  },100);
+}
+
+ChangeDocStatus()
+{
+  this.documentation = !this.documentation;
+  this.docText = this.documentation?"Скрыть документацию":"Показать документацию";
 }
 }
 
